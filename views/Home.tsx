@@ -22,22 +22,22 @@ const Home: React.FC<HomeProps> = ({ onProductClick }) => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Overlay para contraste */}
         <div className="absolute inset-0 bg-black/50 z-10" />
-        
-        {/* Imagen de Fondo con Blur Sutil */}
-        <img 
-          src="https://image2url.com/r2/default/images/1771856405686-2b0e5d99-0fa0-4b6c-be55-01d1065ba411.jpeg" 
-          alt="Yamore Urban Wear Hero" 
-          className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105"
+
+        {/* Imagen de Fondo sin blur */}
+        <img
+          src="https://image2url.com/r2/default/images/1772806715116-a3baccf5-2ad4-461e-b38d-c69c5a8c581b.jpg"
+          alt="Yamore Urban Wear Hero"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        
+
         <div className="relative z-20 text-center px-4">
-          <h1 className="text-6xl md:text-9xl font-black tracking-tighter text-white mb-6 uppercase leading-[0.85] drop-shadow-2xl">
-            YAMORE <br/> <span className="text-zinc-400">URBAN WEAR</span>
+          <h1 className="text-7xl md:text-[10rem] font-serif tracking-widest text-white mb-6 uppercase leading-[0.85] drop-shadow-2xl">
+            YAMORE
           </h1>
           <p className="text-zinc-200 text-base md:text-xl max-w-2xl mx-auto mb-12 font-medium tracking-wide drop-shadow-lg">
-            Minimalismo premium. Cortes oversized. <br/> La identidad urbana de Bahía Blanca.
+            URBAN WEAR <br /> minimalismo premium. Cortes oversized.
           </p>
-          <button 
+          <button
             onClick={handleExplore}
             className="px-10 py-5 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-zinc-200 transition-all transform hover:scale-105 active:scale-95 shadow-2xl"
           >
@@ -53,7 +53,7 @@ const Home: React.FC<HomeProps> = ({ onProductClick }) => {
             <h2 className="text-xs font-bold text-zinc-500 uppercase tracking-[0.3em] mb-4">New Arrivals</h2>
             <h3 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">Destacados / Nuevos Ingresos</h3>
           </div>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12">
             {featuredProducts.map((p) => (
               <ProductCard key={p.id} product={p} onClick={() => onProductClick(p)} />
